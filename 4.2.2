@@ -1,0 +1,30 @@
+#include<iostream>
+using namespace std;
+class Person
+{
+private:
+string name;
+public:
+virtual void read()
+{
+cout<<"The person is reading book"<<endl;
+}
+};
+class Student:public Person
+{
+private:
+int roll_no;
+public:
+virtual void read()
+{
+cout<<"The student is reading"<<endl;
+}
+};
+int main()
+{
+Person *ptr;
+Student student;
+ptr=&student;
+ptr->read();
+return 0;
+}
